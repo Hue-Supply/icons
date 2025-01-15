@@ -5,10 +5,10 @@ const SvgGlass02 = (props: (SVGProps<SVGSVGElement> & { size?: string | number; 
     xmlns="http://www.w3.org/2000/svg"
     {...(props.size ? { width: props.size, height: props.size } : { width: "1em", height: "1em" })}
     
-    
+    fill="none"
     viewBox="0 0 25 24"
     {...props}
-   fill={props.color || "currentColor"}>
+  >
     <path
       fill="#D9D9D9"
       d="M19.127 4.203c0 1.23-2.743 2.228-6.126 2.228s-6.127-.998-6.127-2.228S9.617 1.975 13 1.975s6.126.997 6.126 2.228"

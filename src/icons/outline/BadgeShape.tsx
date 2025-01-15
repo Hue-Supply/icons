@@ -5,10 +5,10 @@ const SvgBadgeShape = (props: (SVGProps<SVGSVGElement> & { size?: string | numbe
     xmlns="http://www.w3.org/2000/svg"
     {...(props.size ? { width: props.size, height: props.size } : { width: "1em", height: "1em" })}
     
-    
+    fill="none"
     viewBox="0 0 24 24"
     {...props}
-   fill={props.color || "currentColor"}>
+  >
     <g clipPath="url(#badge-shape_svg__a)">
       <path
         stroke="currentColor"

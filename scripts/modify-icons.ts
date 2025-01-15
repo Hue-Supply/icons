@@ -25,13 +25,11 @@ const modifyIcon = (filePath: string) => {
     const svgAttributes = svgMatch[1];
 
     let newSvgAttributes = svgAttributes
-      .replace(/fill="none"/, '')
       .replace(
         /width="[^"]*"/,
         '{...(props.size ? { width: props.size, height: props.size } : { width: "1em", height: "1em" })}'
       )
       .replace(/height="[^"]*"/, '');
-    newSvgAttributes += ' fill={props.color || "currentColor"}';
 
     content = content.replace(svgTagRegex, `<svg${newSvgAttributes}>`);
   }
