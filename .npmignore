@@ -1,0 +1,6 @@
+node_modules/
+src/
+scripts/
+dist/types/scripts/generate-index.d.ts
+dist/types/scripts/modify-icons.d.ts
+dist/types/src/test.d.ts

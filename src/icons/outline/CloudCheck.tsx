@@ -1,0 +1,21 @@
+import * as React from 'react';
+import type { SVGProps } from 'react';
+const SvgCloudCheck = (props: (SVGProps<SVGSVGElement> & { size?: string | number; color?: string })) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...(props.size ? { width: props.size, height: props.size } : { width: "1em", height: "1em" })}
+    
+    
+    viewBox="0 0 24 24"
+    {...props}
+   fill={props.color || "currentColor"}>
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="m9 14 1.646 1.646a.5.5 0 0 0 .708 0L15 12m-8.5 7C4.015 19 2 16.83 2 14.154s2.015-4.846 4.5-4.846q.27 0 .534.033C7.311 6.895 9.246 5 11.593 5c2.404 0 4.377 1.99 4.576 4.523.42-.14.868-.215 1.331-.215 2.485 0 4.5 2.17 4.5 4.846S19.985 19 17.5 19z"
+    />
+  </svg>
+);
+export default SvgCloudCheck;

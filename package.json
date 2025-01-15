@@ -1,0 +1,52 @@
+{
+  "name": "@hue-supply/icons-react",
+  "version": "1.0.5",
+  "description": "Hue Icons is a comprehensive collection of over 4,700 meticulously crafted UI icons, designed in Figma and optimized for seamless integration into your React projects.",
+  "exports": {
+    ".": {
+      "types": "./dist/types/src/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": ">=18.3.1",
+    "react-dom": ">=18.3.1"
+  },
+  "scripts": {
+    "start": "vite",
+    "generate-icons": "npx @svgr/cli --typescript --icon --out-dir src/icons icons",
+    "generate-icons-tpl": "npx @svgr/cli --typescript --icon --template svgr-template.cjs --out-dir src/icons icons",
+    "modify-icons": "node --experimental-strip-types --experimental-transform-types ./scripts/modify-icons.ts",
+    "generate-index": "tsc && node dist/scripts/generate-index.js",
+    "generate-and-modify-icons": "npm run generate-icons && npm run modify-icons",
+    "build": "npm run generate-and-modify-icons && npm run generate-index && rslib build"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@microsoft/api-extractor": "7.49.1",
+    "@rsbuild/plugin-react": "1.1.0",
+    "@rslib/core": "0.3.1",
+    "@svgr/cli": "^8.1.0",
+    "@svgr/core": "^8.1.0",
+    "@types/node": "^22.10.6",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.18.0",
+    "glob": "11.0.1",
+    "prettier": "^3.4.2",
+    "svgo": "^3.3.2",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}
