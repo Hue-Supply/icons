@@ -1,6 +1,6 @@
 {
   "name": "@hue-supply/icons-react",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Hue Icons is a comprehensive collection of over 4,700 meticulously crafted UI icons, designed in Figma and optimized for seamless integration into your React projects.",
   "exports": {
     ".": {
@@ -10,8 +10,7 @@
     }
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "type": "module",
   "sideEffects": false,
